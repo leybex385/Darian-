@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darian Vale Koh | Chairman & CIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #050507;
+            --bg-secondary: #0a0a0f;
+            --bg-card: #111118;
+            --bg-card-hover: #16161f;
+            --text-primary: #ffffff;
+            --text-secondary: #9a9aa5;
+            --text-muted: #5a5a65;
+            --accent: #c9a962;
+            --accent-light: #d4b675;
+            --accent-dim: rgba(201, 169, 98, 0.12);
+            --border: #1f1f2a;
+            --border-light: #2a2a38;
+            --gradient-dark: linear-gradient(180deg, #050507 0%, #0a0a0f 100%);
+            --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+            --gradient-accent: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+            --shadow-accent: 0 8px 32px rgba(201, 169, 98, 0.08);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        h1 { 
+            font-size: clamp(2.8rem, 6vw, 5.5rem); 
+            letter-spacing: -0.04em;
+            font-weight: 300;
+        }
+
+        h2 { 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 70px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        h3 { 
+            font-size: 0.7rem; 
+            font-family: var(--font-sans); 
+            text-transform: uppercase; 
+            letter-spacing: 0.25em; 
+            color: var(--accent); 
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        p { 
+            margin-bottom: 1.25rem; 
+            font-weight: 300; 
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-light);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        section {
+            padding: 8rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            background: rgba(5, 5, 7, 0.97);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .nav.scrolled {
+            padding: 1rem 3rem;
+            background: rgba(5, 5, 7, 0.99);
+        }
+
+        .nav-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--text-primary);
+            letter-spacing: 0.15em;
+            font-weight: 400;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 500;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .nav-toggle span {
+            width: 28px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hero Section - ABSTRACT DESIGN (NOT PERSON) */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradient-dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(10px) brightness(0.2);
+            transform: scale(1.1);
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(ellipse at 30% 40%, rgba(201, 169, 98, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(201, 169, 98, 0.03) 0%, transparent 50%),
+                repeating-linear-gradient(90deg, transparent 0, transparent 1px, rgba(255,255,255,0.015) 1px, rgba(255,255,255,0.015) 2px);
+            background-size: 100% 100%, 100% 100%, 80px 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(5, 5, 7, 0.9) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+        }
+
+        .hero-label {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-label::before,
+        .hero-label::after {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border-light), transparent);
+        }
+
+        .hero-title {
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 300;
+        }
+
+        .hero-philosophy {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 3px solid var(--accent);
+            padding-left: 3rem;
+            margin-top: 4.5rem;
+            line-height: 1.5;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .hero-philosophy::before {
+            content: '"';
+            position: absolute;
+            top: -30px;
+            left: 15px;
+            font-size: 5rem;
+            color: var(--accent-dim);
+            font-family: var(--font-serif);
+            line-height: 1;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-muted);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            animation: bounce 2.5s infinite;
+            z-index: 2;
+        }
+
+        .hero-scroll svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--text-muted);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-14px); }
+            60% { transform: translateX(-50%) translateY(-7px); }
+        }
+
+        /* Professional Snapshot */
+        .snapshot-section {
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .snapshot-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            opacity: 0.4;
+        }
+
+        .snapshot-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 0;
+        }
+
+        .snapshot-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .snapshot-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .snapshot-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg), var(--shadow-accent);
+            background: var(--bg-card-hover);
+        }
+
+        .snapshot-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .snapshot-card.active {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md), var(--shadow-accent);
+        }
+
+        .snapshot-card.active::before {
+            transform: scaleX(1);
+        }
+
+        .snapshot-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            filter: grayscale(30%) brightness(0.7);
+            transition: var(--transition);
+        }
+
+        .snapshot-card:hover .snapshot-image {
+            filter: grayscale(10%) brightness(0.8);
+            transform: scale(1.05);
+        }
+
+        .snapshot-content {
+            padding: 2rem 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .snapshot-icon {
+            width: 44px;
+            height: 44px;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            background: var(--gradient-card);
+            border-radius: 50%;
+            border: 1px solid var(--border);
+        }
+
+        .snapshot-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .snapshot-label {
+            font-family: var(--font-sans);
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .snapshot-value {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            line-height: 1.5;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .snapshot-description {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+        }
+
+        .snapshot-divider {
+            width: 35px;
+            height: 1px;
+            background: var(--border);
+            margin: 1.25rem auto 0;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .snapshot-card:hover .snapshot-divider {
+            background: var(--accent);
+            width: 50px;
+        }
+
+        /* About Section - Single Photo */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 7rem;
+            align-items: start;
+        }
+
+        .profile-image-wrapper {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-card);
+        }
+
+        .profile-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(5, 5, 7, 0.6) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .profile-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            object-position: center top;
+            filter: grayscale(20%) contrast(1.05);
+            transition: var(--transition);
+        }
+
+        .profile-image-wrapper:hover .profile-image {
+            filter: grayscale(0%) contrast(1);
+            transform: scale(1.02);
+        }
+
+        .profile-image-caption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            z-index: 3;
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .text-block {
+            padding-top: 1.5rem;
+        }
+
+        .text-block p {
+            position: relative;
+            padding-left: 1.75rem;
+        }
+
+        .text-block p::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .career-timeline {
+            margin-top: 3.5rem;
+        }
+
+        .career-item {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .career-item:hover {
+            padding-left: 1.5rem;
+            margin-left: -1.5rem;
+            border-color: var(--accent);
+        }
+
+        .career-item:last-child {
+            border-bottom: none;
+        }
+
+        .career-period {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            padding-top: 0.25rem;
+        }
+
+        .career-details h4 {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        .career-details p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+            padding-left: 0;
+            line-height: 1.8;
+        }
+
+        .career-details p::before {
+            display: none;
+        }
+
+        /* Philosophy Section - WITH SECOND PHOTO PLACEMENT */
+        .philosophy-section {
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .philosophy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            opacity: 0.3;
+        }
+
+        .philosophy-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .principles-list {
+            list-style: none;
+            margin: 0;
+            counter-reset: principle;
+        }
+
+        .principle-item {
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .principle-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .principle-item:hover {
+            background: var(--bg-card);
+            border-color: var(--accent);
+        }
+
+        .principle-item.active {
+            background: var(--bg-card);
+            border-color: var(--accent);
+        }
+
+        .principle-content {
+            padding: 2.5rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 3rem;
+            transition: var(--transition);
+        }
+
+        .principle-item:hover .principle-content,
+        .principle-item.active .principle-content {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-left: -2rem;
+            margin-right: -2rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .principle-number {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            min-width: 45px;
+            transition: var(--transition);
+        }
+
+        .principle-item:hover .principle-number,
+        .principle-item.active .principle-number {
+            color: var(--accent-light);
+        }
+
+        .principle-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+            color: var(--text-primary);
+            line-height: 1.4;
+            flex: 1;
+            transition: var(--transition);
+        }
+
+        .principle-item:hover .principle-text,
+        .principle-item.active .principle-text {
+            color: var(--accent);
+        }
+
+        .principle-arrow {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-muted);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .principle-item:hover .principle-arrow,
+        .principle-item.active .principle-arrow {
+            stroke: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .principle-item.active .principle-arrow {
+            transform: rotate(180deg);
+        }
+
+        .principle-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out;
+            opacity: 0;
+        }
+
+        .principle-item.active .principle-detail {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .principle-detail-content {
+            padding: 0 4rem 2.5rem 4rem;
+            margin-left: -2rem;
+            margin-right: -2rem;
+        }
+
+        .principle-detail p {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin: 0;
+            padding-left: 0;
+            max-width: 800px;
+        }
+
+        .principle-detail p::before {
+            display: none;
+        }
+
+        /* SECOND PHOTO PLACEMENT - Philosophy Sidebar */
+        .philosophy-sidebar {
+            position: sticky;
+            top: 150px;
+        }
+
+        .philosophy-photo-wrapper {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+        }
+
+        .philosophy-photo-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(5, 5, 7, 0.7) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .philosophy-photo {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: center center;
+            filter: grayscale(25%) contrast(1.05);
+            transition: var(--transition);
+        }
+
+        .philosophy-photo-wrapper:hover .philosophy-photo {
+            filter: grayscale(5%) contrast(1.1);
+            transform: scale(1.02);
+        }
+
+        .philosophy-photo-caption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            z-index: 2;
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .philosophy-sidebar-note {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+
+        .philosophy-sidebar-note p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .philosophy-sidebar-note p::before {
+            display: none;
+        }
+
+        /* Methodology Grid */
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 5.5rem;
+        }
+
+        .method-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .method-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            background: var(--bg-card-hover);
+        }
+
+        .method-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .method-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            filter: grayscale(25%) brightness(0.75);
+            transition: var(--transition);
+        }
+
+        .method-card:hover .method-image {
+            filter: grayscale(0%) brightness(0.85);
+            transform: scale(1.05);
+        }
+
+        .method-content {
+            padding: 2rem 2.25rem;
+        }
+
+        .method-card h4 {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        .method-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.9;
+            padding-left: 0;
+        }
+
+        .method-card p::before {
+            display: none;
+        }
+
+        /* Subscription Section */
+        .subscription-section {
+            background: var(--bg-secondary);
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .subscription-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .subscription-label {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .subscription-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .subscription-description {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .subscription-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .subscription-input {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 1.25rem 1.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .subscription-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .subscription-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-dim);
+        }
+
+        .subscription-button {
+            background: var(--accent);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 2px;
+            padding: 1.25rem 2.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .subscription-button:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .subscription-note {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+        }
+
+        .subscription-success {
+            display: none;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(201, 169, 98, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 2px;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .subscription-success.show {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Firm Section */
+        .firm-section {
+            background: var(--bg-secondary);
+        }
+
+        .firm-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.75rem;
+            margin-top: 4.5rem;
+        }
+
+        .firm-card {
+            background: var(--bg-card);
+            padding: 3.5rem 3rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .firm-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .firm-card h4 {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 2.25rem;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+        }
+
+        .firm-card ul {
+            list-style: none;
+        }
+
+        .firm-card li {
+            padding: 1.1rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 0.95rem;
+        }
+
+        .firm-card li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .firm-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Research Section */
+        .research-section {
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .research-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            opacity: 0.3;
+        }
+
+        .memo-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 4.5rem;
+        }
+
+        .memo-item {
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .memo-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .memo-item:hover {
+            background: var(--bg-card);
+            border-color: var(--accent);
+        }
+
+        .memo-item.active {
+            background: var(--bg-card);
+            border-color: var(--accent);
+        }
+
+        .memo-header {
+            padding: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 3rem;
+            transition: var(--transition);
+        }
+
+        .memo-item:hover .memo-header,
+        .memo-item.active .memo-header {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-left: -2rem;
+            margin-right: -2rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .memo-main {
+            flex: 1;
+        }
+
+        .memo-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            font-weight: 400;
+        }
+
+        .memo-item:hover .memo-title,
+        .memo-item.active .memo-title {
+            color: var(--accent);
+        }
+
+        .memo-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .memo-meta {
+            text-align: right;
+            min-width: 180px;
+            flex-shrink: 0;
+        }
+
+        .memo-date {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .memo-type {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            display: block;
+        }
+
+        .memo-arrow {
+            width: 28px;
+            height: 28px;
+            stroke: var(--text-muted);
+            transition: var(--transition);
+            flex-shrink: 0;
+            margin-left: 1.5rem;
+        }
+
+        .memo-item:hover .memo-arrow,
+        .memo-item.active .memo-arrow {
+            stroke: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .memo-item.active .memo-arrow {
+            transform: rotate(180deg);
+        }
+
+        .memo-detail {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out;
+            opacity: 0;
+        }
+
+        .memo-item.active .memo-detail {
+            max-height: 1200px;
+            opacity: 1;
+        }
+
+        .memo-detail-content {
+            padding: 0 4rem 3.5rem 4rem;
+            margin-left: -2rem;
+            margin-right: -2rem;
+        }
+
+        .memo-detail-image {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 2px;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border);
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+
+        .memo-detail-image:hover {
+            filter: grayscale(0%);
+        }
+
+        .memo-detail-text {
+            max-width: 800px;
+        }
+
+        .memo-detail-text h4 {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .memo-detail-text p {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 1.5rem;
+            padding-left: 0;
+        }
+
+        .memo-detail-text p::before {
+            display: none;
+        }
+
+        .memo-detail-text ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .memo-detail-text li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .memo-detail-text li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .memo-key-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .memo-key-point {
+            background: var(--bg-card);
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+
+        .memo-key-point h5 {
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .memo-key-point p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Footer / Contact */
+        footer {
+            padding: 9rem 0 6rem;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.75rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+
+        .email-link {
+            display: inline-block;
+            color: var(--text-primary);
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            text-decoration: none;
+            padding: 1.5rem 3.5rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: var(--transition);
+            background: var(--bg-card);
+        }
+
+        .email-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--bg-secondary);
+        }
+
+        .firm-note {
+            margin-top: 7rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+        }
+
+        .copyright {
+            margin-top: 2.5rem;
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(45px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay:nth-child(1) { transition-delay: 0.1s; }
+        .stagger-delay:nth-child(2) { transition-delay: 0.2s; }
+        .stagger-delay:nth-child(3) { transition-delay: 0.3s; }
+        .stagger-delay:nth-child(4) { transition-delay: 0.4s; }
+        .stagger-delay:nth-child(5) { transition-delay: 0.5s; }
+        .stagger-delay:nth-child(6) { transition-delay: 0.6s; }
+
+        /* Mobile Navigation */
+        .nav-links-mobile {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 420px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            flex-direction: column;
+            padding: 7rem 3.5rem;
+            gap: 2.25rem;
+            transition: var(--transition);
+            z-index: 999;
+            border-left: 1px solid var(--border);
+        }
+
+        .nav-links-mobile.active {
+            right: 0;
+        }
+
+        .nav-links-mobile a {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-family: var(--font-serif);
+            letter-spacing: 0.05em;
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            z-index: 998;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .snapshot-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 5rem;
+            }
+
+            .philosophy-layout {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .philosophy-sidebar {
+                position: relative;
+                top: 0;
+                order: -1;
+            }
+
+            .philosophy-photo {
+                height: 400px;
+            }
+
+            .methodology-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .memo-key-points {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links-mobile {
+                display: flex;
+            }
+
+            .nav-overlay {
+                display: block;
+            }
+
+            .hero-philosophy {
+                font-size: 1.4rem;
+                padding-left: 2rem;
+            }
+
+            .snapshot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .firm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principle-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .principle-number {
+                margin-bottom: 0.5rem;
+            }
+
+            .principle-detail-content {
+                padding: 0 2rem 2rem 2rem;
+                margin-left: -2rem;
+                margin-right: -2rem;
+            }
+
+            .memo-header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .memo-meta {
+                text-align: left;
+            }
+
+            .memo-arrow {
+                display: none;
+            }
+
+            .memo-detail-content {
+                padding: 0 2rem 2.5rem 2rem;
+                margin-left: -2rem;
+                margin-right: -2rem;
+            }
+
+            .memo-detail-image {
+                height: 250px;
+            }
+
+            .subscription-form {
+                flex-direction: column;
+            }
+
+            .subscription-button {
+                width: 100%;
+            }
+
+            .career-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 6rem 0;
+            }
+
+            .container {
+                padding: 0 2rem;
+            }
+
+            .nav {
+                padding: 1.25rem 2rem;
+            }
+
+            .nav.scrolled {
+                padding: 1rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 1.9rem;
+            }
+
+            .hero-label {
+                gap: 1.25rem;
+            }
+
+            .hero-label::before,
+            .hero-label::after {
+                width: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">AURORA <span>RIDGE</span> PARTNERS</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#firm">Firm</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <ul class="nav-links-mobile" id="navLinksMobile">
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#philosophy" class="mobile-link">Philosophy</a></li>
+        <li><a href="#firm" class="mobile-link">Firm</a></li>
+        <li><a href="#research" class="mobile-link">Research</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+
+    <!-- Hero Section - ABSTRACT DESIGN (NOT PERSON) -->
+    <header class="hero">
+        <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/166c00d5d-62fd-43c2-b60a-d47fc2e88434.png" alt="Financial Architecture Abstract Design" class="hero-bg">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label fade-in">Founder & Chairman, CIO</div>
+                <h1 class="hero-title fade-in stagger-delay">Darian Vale Koh</h1>
+                <p class="hero-subtitle fade-in stagger-delay">Aurora Ridge Partners — Established 2018</p>
+                <div class="hero-philosophy fade-in stagger-delay">
+                    Designing capital structures that endure across cycles. Risk is not volatility — it is irreversible error.
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Professional Snapshot -->
+    <section class="snapshot-section">
+        <div class="container">
+            <div class="snapshot-grid">
+                <div class="snapshot-card fade-in">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/13db8ff88-7069-4370-8e8d-e7881a444d83.png" alt="Singapore Engineering Heritage" class="snapshot-image">
+                    <div class="snapshot-content">
+                        <div class="snapshot-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20"/>
+                            </svg>
+                        </div>
+                        <div class="snapshot-label">Nationality & Background</div>
+                        <div class="snapshot-value">Singaporean</div>
+                        <p class="snapshot-description">Engineering family heritage. NUS Electronic Engineering & Systems Control. Systems thinking applied to financial architecture.</p>
+                        <div class="snapshot-divider"></div>
+                    </div>
+                </div>
+                <div class="snapshot-card fade-in stagger-delay active">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/10b3cf04d-758e-4cae-9aa1-b069a664a209.png" alt="Global Financial Centers" class="snapshot-image">
+                    <div class="snapshot-content">
+                        <div class="snapshot-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="snapshot-label">Primary Residences</div>
+                        <div class="snapshot-value">New York / Singapore / Zurich</div>
+                        <p class="snapshot-description">Strategic positioning across major financial centers. Direct access to institutional capital markets in Asia, Europe, and North America.</p>
+                        <div class="snapshot-divider"></div>
+                    </div>
+                </div>
+                <div class="snapshot-card fade-in stagger-delay">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1786f0069-3667-439d-bfa0-219676470ef8.png" alt="Systemic Risk & Digital Infrastructure" class="snapshot-image">
+                    <div class="snapshot-content">
+                        <div class="snapshot-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="snapshot-label">Investment Focus</div>
+                        <div class="snapshot-value">Systemic Risk & Digital Infrastructure</div>
+                        <p class="snapshot-description">Cross-cycle asset allocation. Settlement & liquidity risk modeling. Digital assets as non-sovereign liquidity instruments.</p>
+                        <div class="snapshot-divider"></div>
+                    </div>
+                </div>
+                <div class="snapshot-card fade-in stagger-delay">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1296380b9-9c38-49ce-b509-a7b6f1b10a58.png" alt="Professional Experience" class="snapshot-image">
+                    <div class="snapshot-content">
+                        <div class="snapshot-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="snapshot-label">Professional Experience</div>
+                        <div class="snapshot-value">30+ Years Across Financial Cycles</div>
+                        <p class="snapshot-description">MAS (1992), European Banking (1996), Cross-cycle allocation (2001-2013), Digital asset infrastructure (2014), Aurora Ridge (2018-present).</p>
+                        <div class="snapshot-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - SINGLE PHOTO -->
+    <section id="about">
+        <div class="container">
+            <div class="about-layout">
+                <!-- Photo 1: Main Profile (About Section) -->
+                <div class="profile-image-wrapper fade-in">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/19f9b540d-0a30-41dc-b688-eaa2efa3de4c.png" alt="Darian Vale Koh - Professional Portrait" class="profile-image">
+                    <div class="profile-image-caption">New York, 2024</div>
+                </div>
+                <!-- Text Content -->
+                <div class="text-block fade-in stagger-delay">
+                    <h3>Background</h3>
+                    <h2>From Systems Engineering to Financial Architecture</h2>
+                    <p>Born into an engineering family in Singapore, Darian's early intellectual formation was defined by complex systems and failure pathways rather than isolated efficiency. Growing up during Asia's manufacturing integration into global markets, he recognized that system structure determines outcomes more than single-point optimization.</p>
+                    <p>At the National University of Singapore, he studied Electronic Engineering and Systems Control with Statistics and Decision Sciences, focusing on failure pathways in complex systems and risk amplification mechanisms — knowledge that became his "underlying language" for financial markets.</p>
+                    <p>Since 2014, he has treated digital assets not as speculation, but as a structural layer for non-sovereign liquidity and settlement efficiency, advising institutions on integrating them into multi-asset risk frameworks.</p>
+                    
+                    <h3 style="margin-top: 4.5rem;">Career Focus</h3>
+                    <div class="career-timeline">
+                        <div class="career-item fade-in">
+                            <span class="career-period">1992–1996</span>
+                            <div class="career-details">
+                                <h4>Monetary Authority of Singapore</h4>
+                                <p>Interbank settlement risk analysis, FX clearing & liquidity stress modeling, contagion risk assessment across financial institutions.</p>
+                            </div>
+                        </div>
+                        <div class="career-item fade-in stagger-delay">
+                            <span class="career-period">1996–2001</span>
+                            <div class="career-details">
+                                <h4>European Banking (Switzerland)</h4>
+                                <p>Asset-liability management, interest rate curve risk, maturity mismatch management, institutional balance sheet optimization.</p>
+                            </div>
+                        </div>
+                        <div class="career-item fade-in stagger-delay">
+                            <span class="career-period">2001–2013</span>
+                            <div class="career-details">
+                                <h4>Cross-Cycle Asset Allocation</h4>
+                                <p>Pension fund modeling, insurance capital duration & hedging, cross-cycle investment frameworks for large foundations in Switzerland & Boston.</p>
+                            </div>
+                        </div>
+                        <div class="career-item fade-in stagger-delay">
+                            <span class="career-period">2013–2018</span>
+                            <div class="career-details">
+                                <h4>Digital Asset Infrastructure</h4>
+                                <p>Digital asset structuring for institutions, custody & compliance frameworks, reconstructing correlations between digital and traditional assets.</p>
+                            </div>
+                        </div>
+                        <div class="career-item fade-in stagger-delay">
+                            <span class="career-period">2018–Present</span>
+                            <div class="career-details">
+                                <h4>Aurora Ridge Partners</h4>
+                                <p>Founder & Chairman/CIO. Long-term capital structure design, traditional & digital asset coordination, risk-first investment platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Philosophy - WITH SECOND PHOTO PLACEMENT -->
+    <section id="philosophy" class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-layout">
+                <!-- Left: Principles -->
+                <div class="fade-in">
+                    <h3>Investment Philosophy</h3>
+                    <h2>Structure Over Returns</h2>
+                    
+                    <ul class="principles-list">
+                        <li class="principle-item" data-principle="1">
+                            <div class="principle-content">
+                                <span class="principle-number">01</span>
+                                <span class="principle-text">Risk precedes return</span>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </div>
+                            <div class="principle-detail">
+                                <div class="principle-detail-content">
+                                    <p>In every investment decision, the first question is not "what can we earn?" but "what can we lose?" Return is a byproduct of properly managed risk, not the primary objective. This principle guides all capital allocation decisions at Aurora Ridge.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="principle-item stagger-delay" data-principle="2">
+                            <div class="principle-content">
+                                <span class="principle-number">02</span>
+                                <span class="principle-text">Capital must survive before it compounds</span>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </div>
+                            <div class="principle-detail">
+                                <div class="principle-detail-content">
+                                    <p>Preservation of capital is the foundation of all long-term wealth creation. A portfolio that cannot withstand market stress has no opportunity to compound. We design structures that endure through cycles, ensuring capital survives to participate in recovery and growth.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="principle-item stagger-delay" data-principle="3">
+                            <div class="principle-content">
+                                <span class="principle-number">03</span>
+                                <span class="principle-text">Volatility is not risk; fragility is</span>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </div>
+                            <div class="principle-detail">
+                                <div class="principle-detail-content">
+                                    <p>Price fluctuations are noise; structural weakness is the signal. A portfolio can be volatile yet robust, or stable yet fragile. We focus on identifying and eliminating fragility — the inability to withstand stress — rather than minimizing short-term price movements.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="principle-item stagger-delay" data-principle="4">
+                            <div class="principle-content">
+                                <span class="principle-number">04</span>
+                                <span class="principle-text">Structure matters more than timing</span>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"/>
+                                </svg>
+                            </div>
+                            <div class="principle-detail">
+                                <div class="principle-detail-content">
+                                    <p>Market timing is a fool's game; structural positioning is the professional's craft. Rather than attempting to predict short-term movements, we build portfolios with inherent resilience across multiple scenarios. The right structure performs adequately in all conditions and exceptionally in some.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: SECOND PHOTO PLACEMENT (Philosophy Sidebar) -->
+                <div class="philosophy-sidebar fade-in stagger-delay">
+                    <div class="philosophy-photo-wrapper">
+                        <!-- ⭐ SECOND PHOTO GOES HERE ⭐ -->
+                        <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/166c00d5d-62fd-43c2-b60a-d47fc2e88434.png" alt="Darian Vale Koh - Philosophy" class="philosophy-photo">
+                        <div class="philosophy-photo-caption">Aurora Ridge Partners, Singapore</div>
+                    </div>
+                    <div class="philosophy-sidebar-note">
+                        <p>"The mission of capital is to survive cycles, not to time peaks. Every decision must be explainable, reviewable, and operational under extreme conditions."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodology Grid -->
+            <div class="methodology-grid">
+                <div class="method-card fade-in">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1f503621f-0ad1-44f1-b48c-bc41c1a53806.png" alt="Across Cycles" class="method-image">
+                    <div class="method-content">
+                        <h4>Across Cycles</h4>
+                        <p>Focusing on portfolio structures that can survive extreme scenarios rather than forecasting short-term trends. Long-term regime thinking over tactical positioning. The mission of capital is to survive cycles, not to time peaks.</p>
+                    </div>
+                </div>
+                <div class="method-card fade-in stagger-delay">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1366e9ca6-3ed6-43ba-9365-f9b3e772a233.png" alt="Under Stress" class="method-image">
+                    <div class="method-content">
+                        <h4>Under Stress</h4>
+                        <p>Market collapses begin with breakdowns in settlement and liquidity, not price. We model for the fracture points before they appear. A good portfolio is one that continues to exist in bad years.</p>
+                    </div>
+                </div>
+                <div class="method-card fade-in stagger-delay">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/194e7ec26-8c98-4213-9bae-60fbfa467543.png" alt="Within Constraints" class="method-image">
+                    <div class="method-content">
+                        <h4>Within Constraints</h4>
+                        <p>Deep familiarity with regulation, compliance, and institutional constraints to ensure operational resilience. If an asset cannot be incorporated into a risk framework, it does not belong in a portfolio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscription-section">
+        <div class="container">
+            <div class="subscription-container">
+                <div class="subscription-label fade-in">Research & Insights</div>
+                <h2 class="subscription-title fade-in stagger-delay">Subscribe to Our Perspectives</h2>
+                <p class="subscription-description fade-in stagger-delay">
+                    Receive quarterly insights on capital structure, systemic risk, and digital asset infrastructure. 
+                    No marketing. No hype. Only institutional-grade analysis.
+                </p>
+                <form class="subscription-form fade-in stagger-delay" id="subscriptionForm">
+                    <input type="email" class="subscription-input" placeholder="Enter your institutional email" required>
+                    <button type="submit" class="subscription-button">Subscribe</button>
+                </form>
+                <div class="subscription-success" id="subscriptionSuccess">
+                    Thank you for subscribing. You will receive our next perspective shortly.
+                </div>
+                <p class="subscription-note fade-in stagger-delay">
+                    2–4 publications per year. Unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firm Section -->
+    <section id="firm" class="firm-section">
+        <div class="container">
+            <h3>Aurora Ridge Partners</h3>
+            <h2>The Firm</h2>
+            
+            <div class="firm-grid">
+                <div class="firm-card fade-in">
+                    <h4>About the Firm</h4>
+                    <ul>
+                        <li>Founded in 2018, Singapore</li>
+                        <li>Focus on long-term capital structure design</li>
+                        <li>Serving institutions and sophisticated capital</li>
+                        <li>Committee-driven decision process</li>
+                        <li>Risk-first, return-second philosophy</li>
+                    </ul>
+                </div>
+                <div class="firm-card fade-in stagger-delay">
+                    <h4>Investment Scope</h4>
+                    <ul>
+                        <li>Global equities and fixed income</li>
+                        <li>Private credit and structured products</li>
+                        <li>Blockchain infrastructure & digital protocols</li>
+                        <li>Conservative digital asset strategies</li>
+                        <li>No high-frequency speculation</li>
+                    </ul>
+                </div>
+                <div class="firm-card fade-in">
+                    <h4>Team Philosophy</h4>
+                    <ul>
+                        <li>Multi-disciplinary backgrounds</li>
+                        <li>Engineering + Finance + Digital Infrastructure</li>
+                        <li>Deliberately disciplined team structure</li>
+                        <li>Risk modeling & systems engineering expertise</li>
+                        <li>Explainable, reviewable decisions</li>
+                    </ul>
+                </div>
+                <div class="firm-card fade-in stagger-delay">
+                    <h4>Operating Principles</h4>
+                    <ul>
+                        <li>Investment architecture design</li>
+                        <li>Risk discussions and veto authority</li>
+                        <li>Operational under extreme conditions</li>
+                        <li>Deep strategic dialogue with clients</li>
+                        <li>Low-profile, institutionally authentic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research-section">
+        <div class="container">
+            <h3>Research & Thinking</h3>
+            <h2>Notes & Perspectives</h2>
+            
+            <div class="memo-list">
+                <div class="memo-item fade-in" data-memo="1">
+                    <div class="memo-header">
+                        <div class="memo-main">
+                            <h3 class="memo-title">Capital Structure Under Stress</h3>
+                            <p class="memo-excerpt">Examining fracture points in modern financial architecture during liquidity crises and settlement breakdowns.</p>
+                        </div>
+                        <div class="memo-meta">
+                            <span class="memo-date">Q4 2023</span>
+                            <span class="memo-type">Internal Memo</span>
+                        </div>
+                        <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                    <div class="memo-detail">
+                        <div class="memo-detail-content">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/16ab5e163-7d26-47df-9c2d-16248ce2d027.png" alt="Capital Structure Visualization" class="memo-detail-image">
+                            <div class="memo-detail-text">
+                                <h4>Executive Summary</h4>
+                                <p>Market collapses never begin with prices — they begin with breakdowns in settlement, trust, and liquidity. This memo examines the structural vulnerabilities that emerge during periods of financial stress, drawing from observations across multiple crisis cycles.</p>
+                                <p>The 2008 financial crisis and 2020 market dislocation revealed that traditional risk models failed to capture the true nature of systemic fragility. Liquidity evaporated not from fundamental asset deterioration, but from the breakdown of intermediary functioning and settlement confidence.</p>
+                                
+                                <ul>
+                                    <li>Settlement systems become stressed before price dislocations become visible</li>
+                                    <li>Counterparty risk assessment fails when correlation assumptions break down</li>
+                                    <li>Liquidity pools that appear robust in normal conditions can vanish simultaneously under stress</li>
+                                    <li>The sequence of failure matters more than the magnitude of initial shock</li>
+                                </ul>
+
+                                <div class="memo-key-points">
+                                    <div class="memo-key-point">
+                                        <h5>Key Observation</h5>
+                                        <p>Market infrastructure stress precedes visible price movements by 2-4 weeks in most crisis scenarios.</p>
+                                    </div>
+                                    <div class="memo-key-point">
+                                        <h5>Implication</h5>
+                                        <p>Portfolio construction must account for settlement and liquidity risk, not just market risk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memo-item fade-in stagger-delay" data-memo="2">
+                    <div class="memo-header">
+                        <div class="memo-main">
+                            <h3 class="memo-title">Liquidity Is Not Always Where You Expect It</h3>
+                            <p class="memo-excerpt">Hidden liquidity pools and their behavior during market dislocation events — lessons from 2008 and 2020.</p>
+                        </div>
+                        <div class="memo-meta">
+                            <span class="memo-date">Q2 2023</span>
+                            <span class="memo-type">Internal Memo</span>
+                        </div>
+                        <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                    <div class="memo-detail">
+                        <div class="memo-detail-content">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1c302d615-3a70-4145-88a3-395f6ba646b2.png" alt="Liquidity Flow Visualization" class="memo-detail-image">
+                            <div class="memo-detail-text">
+                                <h4>Executive Summary</h4>
+                                <p>Liquidity is not a static property of assets — it is a dynamic function of market structure, participant behavior, and systemic confidence. During dislocation events, liquidity migrates in ways that traditional models fail to predict.</p>
+                                <p>Our analysis of the 2008 and 2020 crises reveals that apparent liquidity can vanish simultaneously across multiple asset classes, while unexpected sources of liquidity emerge in non-traditional venues. Understanding these patterns is critical for portfolio resilience.</p>
+                                
+                                <ul>
+                                    <li>ETF liquidity is derivative of underlying market liquidity, not independent</li>
+                                    <li>Private markets offer illusory liquidity during normal conditions</li>
+                                    <li>Central bank intervention creates artificial liquidity that distorts price discovery</li>
+                                    <li>Cross-asset correlations converge to 1.0 during true stress events</li>
+                                </ul>
+
+                                <div class="memo-key-points">
+                                    <div class="memo-key-point">
+                                        <h5>Key Observation</h5>
+                                        <p>Liquidity migration patterns during 2020 differed significantly from 2008, suggesting structural market changes.</p>
+                                    </div>
+                                    <div class="memo-key-point">
+                                        <h5>Implication</h5>
+                                        <p>Portfolio construction must account for liquidity regime changes, not just volatility regimes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memo-item fade-in stagger-delay" data-memo="3">
+                    <div class="memo-header">
+                        <div class="memo-main">
+                            <h3 class="memo-title">Digital Assets as Settlement Layer, Not Trade</h3>
+                            <p class="memo-excerpt">Reframing digital assets within institutional portfolio construction frameworks for non-sovereign liquidity.</p>
+                        </div>
+                        <div class="memo-meta">
+                            <span class="memo-date">Q4 2022</span>
+                            <span class="memo-type">Internal Memo</span>
+                        </div>
+                        <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                    <div class="memo-detail">
+                        <div class="memo-detail-content">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1cf307c5d-7c6e-441a-91d2-a30fa6ae7097.png" alt="Digital Asset Infrastructure Visualization" class="memo-detail-image">
+                            <div class="memo-detail-text">
+                                <h4>Executive Summary</h4>
+                                <p>Digital assets should not be evaluated as speculative instruments, but as potential infrastructure for non-sovereign settlement and liquidity. This reframing fundamentally changes how institutions should approach allocation and risk assessment.</p>
+                                <p>Since 2014, we have analyzed digital assets through the lens of settlement efficiency, counterparty risk reduction, and operational resilience — not price appreciation. This perspective reveals different risk-return characteristics than traditional analysis.</p>
+                                
+                                <ul>
+                                    <li>Decentralized settlement reduces counterparty concentration risk</li>
+                                    <li>Smart contracts can reduce institutional friction costs in specific use cases</li>
+                                    <li>Digital assets function differently as infrastructure vs. as speculative instruments</li>
+                                    <li>Regulatory clarity is improving but remains the primary adoption constraint</li>
+                                </ul>
+
+                                <div class="memo-key-points">
+                                    <div class="memo-key-point">
+                                        <h5>Key Observation</h5>
+                                        <p>Institutional adoption follows infrastructure maturation, not price cycles.</p>
+                                    </div>
+                                    <div class="memo-key-point">
+                                        <h5>Implication</h5>
+                                        <p>Allocation should be based on structural utility, not momentum or thematic exposure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Professional Engagement</h3>
+                <p class="footer-text">Darian engages selectively with institutions, family offices, and long-term partners. Deep strategic dialogue over transactional relationships.</p>
+                <a href="mailto:contact@auroraridge.partners" class="email-link">contact@auroraridge.partners</a>
+                
+                <div class="firm-note">
+                    Aurora Ridge Partners — Established 2018, Singapore
+                </div>
+                <div class="copyright">
+                    © 2024 Darian Vale Koh. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinksMobile = document.getElementById('navLinksMobile');
+        const navOverlay = document.getElementById('navOverlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileNav() {
+            navToggle.classList.toggle('active');
+            navLinksMobile.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinksMobile.classList.contains('active') ? 'hidden' : '';
+        }
+
+        navToggle.addEventListener('click', toggleMobileNav);
+        navOverlay.addEventListener('click', toggleMobileNav);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileNav();
+            });
+        });
+
+        // Principle items clickable functionality
+        const principleItems = document.querySelectorAll('.principle-item');
+        
+        principleItems.forEach(item => {
+            item.addEventListener('click', () => {
+                principleItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        // Memo items clickable functionality
+        const memoItems = document.querySelectorAll('.memo-item');
+        
+        memoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                memoItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                item.classList.toggle('active');
+            });
+        });
+
+        // Subscription form handling
+        const subscriptionForm = document.getElementById('subscriptionForm');
+        const subscriptionSuccess = document.getElementById('subscriptionSuccess');
+
+        subscriptionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            subscriptionForm.style.display = 'none';
+            subscriptionSuccess.classList.add('show');
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- ⭐ SECOND PHOTO GOES HERE ⭐ -->
+<img src="..." alt="Darian Vale Koh - Philosophy" class="philosophy-photo">
+
