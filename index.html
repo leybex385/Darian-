@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darian Vale Koh | Chairman & CIO</title>
+    <!-- Favicon Configuration -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-primary: #050507;
@@ -22,7 +28,7 @@
             --border: #1f1f2a;
             --border-light: #2a2a38;
             --gradient-dark: linear-gradient(180deg, #050507 0%, #0a0a0f 100%);
-            --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
             --gradient-accent: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
             --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -70,21 +76,25 @@
             background: var(--text-muted);
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: var(--font-serif);
             font-weight: 400;
             color: var(--text-primary);
             line-height: 1.2;
         }
 
-        h1 { 
-            font-size: clamp(2.8rem, 6vw, 5.5rem); 
+        h1 {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
             letter-spacing: -0.04em;
             font-weight: 300;
         }
 
-        h2 { 
-            font-size: clamp(2rem, 4vw, 3rem); 
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 2.5rem;
             position: relative;
             display: inline-block;
@@ -100,12 +110,12 @@
             background: var(--accent);
         }
 
-        h3 { 
-            font-size: 0.7rem; 
-            font-family: var(--font-sans); 
-            text-transform: uppercase; 
-            letter-spacing: 0.25em; 
-            color: var(--accent); 
+        h3 {
+            font-size: 0.7rem;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent);
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
@@ -118,9 +128,9 @@
             color: var(--text-primary);
         }
 
-        p { 
-            margin-bottom: 1.25rem; 
-            font-weight: 300; 
+        p {
+            margin-bottom: 1.25rem;
+            font-weight: 300;
             font-size: 1.05rem;
             color: var(--text-secondary);
             line-height: 1.9;
@@ -281,10 +291,10 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 radial-gradient(ellipse at 30% 40%, rgba(201, 169, 98, 0.04) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 60%, rgba(201, 169, 98, 0.03) 0%, transparent 50%),
-                repeating-linear-gradient(90deg, transparent 0, transparent 1px, rgba(255,255,255,0.015) 1px, rgba(255,255,255,0.015) 2px);
+                repeating-linear-gradient(90deg, transparent 0, transparent 1px, rgba(255, 255, 255, 0.015) 1px, rgba(255, 255, 255, 0.015) 2px);
             background-size: 100% 100%, 100% 100%, 80px 100%;
             pointer-events: none;
             z-index: 1;
@@ -394,9 +404,22 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-14px); }
-            60% { transform: translateX(-50%) translateY(-7px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-14px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-7px);
+            }
         }
 
         /* Professional Snapshot */
@@ -614,7 +637,7 @@
             right: 1.5rem;
             z-index: 3;
             font-size: 0.6rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
             letter-spacing: 0.2em;
         }
@@ -869,9 +892,9 @@
 
         .philosophy-photo {
             width: 100%;
-            height: 500px;
+            height: 650px;
             object-fit: cover;
-            object-position: center center;
+            object-position: center 20%;
             filter: grayscale(25%) contrast(1.05);
             transition: var(--transition);
         }
@@ -888,7 +911,7 @@
             right: 1.5rem;
             z-index: 2;
             font-size: 0.6rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
             letter-spacing: 0.2em;
         }
@@ -1105,8 +1128,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Firm Section */
@@ -1502,12 +1532,29 @@
             transform: translateY(0);
         }
 
-        .stagger-delay:nth-child(1) { transition-delay: 0.1s; }
-        .stagger-delay:nth-child(2) { transition-delay: 0.2s; }
-        .stagger-delay:nth-child(3) { transition-delay: 0.3s; }
-        .stagger-delay:nth-child(4) { transition-delay: 0.4s; }
-        .stagger-delay:nth-child(5) { transition-delay: 0.5s; }
-        .stagger-delay:nth-child(6) { transition-delay: 0.6s; }
+        .stagger-delay:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-delay:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-delay:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-delay:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-delay:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-delay:nth-child(6) {
+            transition-delay: 0.6s;
+        }
 
         /* Mobile Navigation */
         .nav-links-mobile {
@@ -1710,6 +1757,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="nav" id="navbar">
@@ -1742,21 +1790,22 @@
 
     <!-- Hero Section - ABSTRACT DESIGN (NOT PERSON) -->
     <header class="hero">
-        <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/166c00d5d-62fd-43c2-b60a-d47fc2e88434.png" alt="Financial Architecture Abstract Design" class="hero-bg">
+        <img src="hero_bg_new.jpg" alt="Financial Architecture Building Design" class="hero-bg">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-label fade-in">Founder & Chairman, CIO</div>
                 <h1 class="hero-title fade-in stagger-delay">Darian Vale Koh</h1>
                 <p class="hero-subtitle fade-in stagger-delay">Aurora Ridge Partners — Established 2018</p>
                 <div class="hero-philosophy fade-in stagger-delay">
-                    Designing capital structures that endure across cycles. Risk is not volatility — it is irreversible error.
+                    Designing capital structures that endure across cycles. Risk is not volatility — it is irreversible
+                    error.
                 </div>
             </div>
         </div>
         <div class="hero-scroll">
             <span>Explore</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
+                <path d="M12 5v14M19 12l-7 7-7-7" />
             </svg>
         </div>
     </header>
@@ -1766,61 +1815,69 @@
         <div class="container">
             <div class="snapshot-grid">
                 <div class="snapshot-card fade-in">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/13db8ff88-7069-4370-8e8d-e7881a444d83.png" alt="Singapore Engineering Heritage" class="snapshot-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/13db8ff88-7069-4370-8e8d-e7881a444d83.png"
+                        alt="Singapore Engineering Heritage" class="snapshot-image">
                     <div class="snapshot-content">
                         <div class="snapshot-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20"/>
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20" />
                             </svg>
                         </div>
                         <div class="snapshot-label">Nationality & Background</div>
                         <div class="snapshot-value">Singaporean</div>
-                        <p class="snapshot-description">Engineering family heritage. NUS Electronic Engineering & Systems Control. Systems thinking applied to financial architecture.</p>
+                        <p class="snapshot-description">Engineering family heritage. NUS Electronic Engineering &
+                            Systems Control. Systems thinking applied to financial architecture.</p>
                         <div class="snapshot-divider"></div>
                     </div>
                 </div>
                 <div class="snapshot-card fade-in stagger-delay active">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/10b3cf04d-758e-4cae-9aa1-b069a664a209.png" alt="Global Financial Centers" class="snapshot-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/10b3cf04d-758e-4cae-9aa1-b069a664a209.png"
+                        alt="Global Financial Centers" class="snapshot-image">
                     <div class="snapshot-content">
                         <div class="snapshot-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
                             </svg>
                         </div>
                         <div class="snapshot-label">Primary Residences</div>
                         <div class="snapshot-value">New York / Singapore / Zurich</div>
-                        <p class="snapshot-description">Strategic positioning across major financial centers. Direct access to institutional capital markets in Asia, Europe, and North America.</p>
+                        <p class="snapshot-description">Strategic positioning across major financial centers. Direct
+                            access to institutional capital markets in Asia, Europe, and North America.</p>
                         <div class="snapshot-divider"></div>
                     </div>
                 </div>
                 <div class="snapshot-card fade-in stagger-delay">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1786f0069-3667-439d-bfa0-219676470ef8.png" alt="Systemic Risk & Digital Infrastructure" class="snapshot-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1786f0069-3667-439d-bfa0-219676470ef8.png"
+                        alt="Systemic Risk & Digital Infrastructure" class="snapshot-image">
                     <div class="snapshot-content">
                         <div class="snapshot-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                             </svg>
                         </div>
                         <div class="snapshot-label">Investment Focus</div>
                         <div class="snapshot-value">Systemic Risk & Digital Infrastructure</div>
-                        <p class="snapshot-description">Cross-cycle asset allocation. Settlement & liquidity risk modeling. Digital assets as non-sovereign liquidity instruments.</p>
+                        <p class="snapshot-description">Cross-cycle asset allocation. Settlement & liquidity risk
+                            modeling. Digital assets as non-sovereign liquidity instruments.</p>
                         <div class="snapshot-divider"></div>
                     </div>
                 </div>
                 <div class="snapshot-card fade-in stagger-delay">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1296380b9-9c38-49ce-b509-a7b6f1b10a58.png" alt="Professional Experience" class="snapshot-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1296380b9-9c38-49ce-b509-a7b6f1b10a58.png"
+                        alt="Professional Experience" class="snapshot-image">
                     <div class="snapshot-content">
                         <div class="snapshot-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
                             </svg>
                         </div>
                         <div class="snapshot-label">Professional Experience</div>
                         <div class="snapshot-value">30+ Years Across Financial Cycles</div>
-                        <p class="snapshot-description">MAS (1992), European Banking (1996), Cross-cycle allocation (2001-2013), Digital asset infrastructure (2014), Aurora Ridge (2018-present).</p>
+                        <p class="snapshot-description">MAS (1992), European Banking (1996), Cross-cycle allocation
+                            (2001-2013), Digital asset infrastructure (2014), Aurora Ridge (2018-present).</p>
                         <div class="snapshot-divider"></div>
                     </div>
                 </div>
@@ -1834,52 +1891,65 @@
             <div class="about-layout">
                 <!-- Photo 1: Main Profile (About Section) -->
                 <div class="profile-image-wrapper fade-in">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/19f9b540d-0a30-41dc-b688-eaa2efa3de4c.png" alt="Darian Vale Koh - Professional Portrait" class="profile-image">
+                    <img src="profile.png" alt="Darian Vale Koh - Professional Portrait" class="profile-image">
                     <div class="profile-image-caption">New York, 2024</div>
                 </div>
                 <!-- Text Content -->
                 <div class="text-block fade-in stagger-delay">
                     <h3>Background</h3>
                     <h2>From Systems Engineering to Financial Architecture</h2>
-                    <p>Born into an engineering family in Singapore, Darian's early intellectual formation was defined by complex systems and failure pathways rather than isolated efficiency. Growing up during Asia's manufacturing integration into global markets, he recognized that system structure determines outcomes more than single-point optimization.</p>
-                    <p>At the National University of Singapore, he studied Electronic Engineering and Systems Control with Statistics and Decision Sciences, focusing on failure pathways in complex systems and risk amplification mechanisms — knowledge that became his "underlying language" for financial markets.</p>
-                    <p>Since 2014, he has treated digital assets not as speculation, but as a structural layer for non-sovereign liquidity and settlement efficiency, advising institutions on integrating them into multi-asset risk frameworks.</p>
-                    
+                    <p>Born into an engineering family in Singapore, Darian's early intellectual formation was defined
+                        by complex systems and failure pathways rather than isolated efficiency. Growing up during
+                        Asia's manufacturing integration into global markets, he recognized that system structure
+                        determines outcomes more than single-point optimization.</p>
+                    <p>At the National University of Singapore, he studied Electronic Engineering and Systems Control
+                        with Statistics and Decision Sciences, focusing on failure pathways in complex systems and risk
+                        amplification mechanisms — knowledge that became his "underlying language" for financial
+                        markets.</p>
+                    <p>Since 2014, he has treated digital assets not as speculation, but as a structural layer for
+                        non-sovereign liquidity and settlement efficiency, advising institutions on integrating them
+                        into multi-asset risk frameworks.</p>
+
                     <h3 style="margin-top: 4.5rem;">Career Focus</h3>
                     <div class="career-timeline">
                         <div class="career-item fade-in">
                             <span class="career-period">1992–1996</span>
                             <div class="career-details">
                                 <h4>Monetary Authority of Singapore</h4>
-                                <p>Interbank settlement risk analysis, FX clearing & liquidity stress modeling, contagion risk assessment across financial institutions.</p>
+                                <p>Interbank settlement risk analysis, FX clearing & liquidity stress modeling,
+                                    contagion risk assessment across financial institutions.</p>
                             </div>
                         </div>
                         <div class="career-item fade-in stagger-delay">
                             <span class="career-period">1996–2001</span>
                             <div class="career-details">
                                 <h4>European Banking (Switzerland)</h4>
-                                <p>Asset-liability management, interest rate curve risk, maturity mismatch management, institutional balance sheet optimization.</p>
+                                <p>Asset-liability management, interest rate curve risk, maturity mismatch management,
+                                    institutional balance sheet optimization.</p>
                             </div>
                         </div>
                         <div class="career-item fade-in stagger-delay">
                             <span class="career-period">2001–2013</span>
                             <div class="career-details">
                                 <h4>Cross-Cycle Asset Allocation</h4>
-                                <p>Pension fund modeling, insurance capital duration & hedging, cross-cycle investment frameworks for large foundations in Switzerland & Boston.</p>
+                                <p>Pension fund modeling, insurance capital duration & hedging, cross-cycle investment
+                                    frameworks for large foundations in Switzerland & Boston.</p>
                             </div>
                         </div>
                         <div class="career-item fade-in stagger-delay">
                             <span class="career-period">2013–2018</span>
                             <div class="career-details">
                                 <h4>Digital Asset Infrastructure</h4>
-                                <p>Digital asset structuring for institutions, custody & compliance frameworks, reconstructing correlations between digital and traditional assets.</p>
+                                <p>Digital asset structuring for institutions, custody & compliance frameworks,
+                                    reconstructing correlations between digital and traditional assets.</p>
                             </div>
                         </div>
                         <div class="career-item fade-in stagger-delay">
                             <span class="career-period">2018–Present</span>
                             <div class="career-details">
                                 <h4>Aurora Ridge Partners</h4>
-                                <p>Founder & Chairman/CIO. Long-term capital structure design, traditional & digital asset coordination, risk-first investment platform.</p>
+                                <p>Founder & Chairman/CIO. Long-term capital structure design, traditional & digital
+                                    asset coordination, risk-first investment platform.</p>
                             </div>
                         </div>
                     </div>
@@ -1896,19 +1966,23 @@
                 <div class="fade-in">
                     <h3>Investment Philosophy</h3>
                     <h2>Structure Over Returns</h2>
-                    
+
                     <ul class="principles-list">
                         <li class="principle-item" data-principle="1">
                             <div class="principle-content">
                                 <span class="principle-number">01</span>
                                 <span class="principle-text">Risk precedes return</span>
-                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6 9 12 15 18 9"/>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
                                 </svg>
                             </div>
                             <div class="principle-detail">
                                 <div class="principle-detail-content">
-                                    <p>In every investment decision, the first question is not "what can we earn?" but "what can we lose?" Return is a byproduct of properly managed risk, not the primary objective. This principle guides all capital allocation decisions at Aurora Ridge.</p>
+                                    <p>In every investment decision, the first question is not "what can we earn?" but
+                                        "what can we lose?" Return is a byproduct of properly managed risk, not the
+                                        primary objective. This principle guides all capital allocation decisions at
+                                        Aurora Ridge.</p>
                                 </div>
                             </div>
                         </li>
@@ -1916,13 +1990,17 @@
                             <div class="principle-content">
                                 <span class="principle-number">02</span>
                                 <span class="principle-text">Capital must survive before it compounds</span>
-                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6 9 12 15 18 9"/>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
                                 </svg>
                             </div>
                             <div class="principle-detail">
                                 <div class="principle-detail-content">
-                                    <p>Preservation of capital is the foundation of all long-term wealth creation. A portfolio that cannot withstand market stress has no opportunity to compound. We design structures that endure through cycles, ensuring capital survives to participate in recovery and growth.</p>
+                                    <p>Preservation of capital is the foundation of all long-term wealth creation. A
+                                        portfolio that cannot withstand market stress has no opportunity to compound. We
+                                        design structures that endure through cycles, ensuring capital survives to
+                                        participate in recovery and growth.</p>
                                 </div>
                             </div>
                         </li>
@@ -1930,13 +2008,17 @@
                             <div class="principle-content">
                                 <span class="principle-number">03</span>
                                 <span class="principle-text">Volatility is not risk; fragility is</span>
-                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6 9 12 15 18 9"/>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
                                 </svg>
                             </div>
                             <div class="principle-detail">
                                 <div class="principle-detail-content">
-                                    <p>Price fluctuations are noise; structural weakness is the signal. A portfolio can be volatile yet robust, or stable yet fragile. We focus on identifying and eliminating fragility — the inability to withstand stress — rather than minimizing short-term price movements.</p>
+                                    <p>Price fluctuations are noise; structural weakness is the signal. A portfolio can
+                                        be volatile yet robust, or stable yet fragile. We focus on identifying and
+                                        eliminating fragility — the inability to withstand stress — rather than
+                                        minimizing short-term price movements.</p>
                                 </div>
                             </div>
                         </li>
@@ -1944,13 +2026,17 @@
                             <div class="principle-content">
                                 <span class="principle-number">04</span>
                                 <span class="principle-text">Structure matters more than timing</span>
-                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6 9 12 15 18 9"/>
+                                <svg class="principle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9" />
                                 </svg>
                             </div>
                             <div class="principle-detail">
                                 <div class="principle-detail-content">
-                                    <p>Market timing is a fool's game; structural positioning is the professional's craft. Rather than attempting to predict short-term movements, we build portfolios with inherent resilience across multiple scenarios. The right structure performs adequately in all conditions and exceptionally in some.</p>
+                                    <p>Market timing is a fool's game; structural positioning is the professional's
+                                        craft. Rather than attempting to predict short-term movements, we build
+                                        portfolios with inherent resilience across multiple scenarios. The right
+                                        structure performs adequately in all conditions and exceptionally in some.</p>
                                 </div>
                             </div>
                         </li>
@@ -1961,11 +2047,13 @@
                 <div class="philosophy-sidebar fade-in stagger-delay">
                     <div class="philosophy-photo-wrapper">
                         <!-- ⭐ SECOND PHOTO GOES HERE ⭐ -->
-                        <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/166c00d5d-62fd-43c2-b60a-d47fc2e88434.png" alt="Darian Vale Koh - Philosophy" class="philosophy-photo">
+                        <img src="photo_2026-03-01_12-07-21.jpg" alt="Darian Vale Koh - Philosophy"
+                            class="philosophy-photo">
                         <div class="philosophy-photo-caption">Aurora Ridge Partners, Singapore</div>
                     </div>
                     <div class="philosophy-sidebar-note">
-                        <p>"The mission of capital is to survive cycles, not to time peaks. Every decision must be explainable, reviewable, and operational under extreme conditions."</p>
+                        <p>"The mission of capital is to survive cycles, not to time peaks. Every decision must be
+                            explainable, reviewable, and operational under extreme conditions."</p>
                     </div>
                 </div>
             </div>
@@ -1973,24 +2061,33 @@
             <!-- Methodology Grid -->
             <div class="methodology-grid">
                 <div class="method-card fade-in">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1f503621f-0ad1-44f1-b48c-bc41c1a53806.png" alt="Across Cycles" class="method-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1f503621f-0ad1-44f1-b48c-bc41c1a53806.png"
+                        alt="Across Cycles" class="method-image">
                     <div class="method-content">
                         <h4>Across Cycles</h4>
-                        <p>Focusing on portfolio structures that can survive extreme scenarios rather than forecasting short-term trends. Long-term regime thinking over tactical positioning. The mission of capital is to survive cycles, not to time peaks.</p>
+                        <p>Focusing on portfolio structures that can survive extreme scenarios rather than forecasting
+                            short-term trends. Long-term regime thinking over tactical positioning. The mission of
+                            capital is to survive cycles, not to time peaks.</p>
                     </div>
                 </div>
                 <div class="method-card fade-in stagger-delay">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1366e9ca6-3ed6-43ba-9365-f9b3e772a233.png" alt="Under Stress" class="method-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1366e9ca6-3ed6-43ba-9365-f9b3e772a233.png"
+                        alt="Under Stress" class="method-image">
                     <div class="method-content">
                         <h4>Under Stress</h4>
-                        <p>Market collapses begin with breakdowns in settlement and liquidity, not price. We model for the fracture points before they appear. A good portfolio is one that continues to exist in bad years.</p>
+                        <p>Market collapses begin with breakdowns in settlement and liquidity, not price. We model for
+                            the fracture points before they appear. A good portfolio is one that continues to exist in
+                            bad years.</p>
                     </div>
                 </div>
                 <div class="method-card fade-in stagger-delay">
-                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/194e7ec26-8c98-4213-9bae-60fbfa467543.png" alt="Within Constraints" class="method-image">
+                    <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/194e7ec26-8c98-4213-9bae-60fbfa467543.png"
+                        alt="Within Constraints" class="method-image">
                     <div class="method-content">
                         <h4>Within Constraints</h4>
-                        <p>Deep familiarity with regulation, compliance, and institutional constraints to ensure operational resilience. If an asset cannot be incorporated into a risk framework, it does not belong in a portfolio.</p>
+                        <p>Deep familiarity with regulation, compliance, and institutional constraints to ensure
+                            operational resilience. If an asset cannot be incorporated into a risk framework, it does
+                            not belong in a portfolio.</p>
                     </div>
                 </div>
             </div>
@@ -2004,11 +2101,12 @@
                 <div class="subscription-label fade-in">Research & Insights</div>
                 <h2 class="subscription-title fade-in stagger-delay">Subscribe to Our Perspectives</h2>
                 <p class="subscription-description fade-in stagger-delay">
-                    Receive quarterly insights on capital structure, systemic risk, and digital asset infrastructure. 
+                    Receive quarterly insights on capital structure, systemic risk, and digital asset infrastructure.
                     No marketing. No hype. Only institutional-grade analysis.
                 </p>
                 <form class="subscription-form fade-in stagger-delay" id="subscriptionForm">
-                    <input type="email" class="subscription-input" placeholder="Enter your institutional email" required>
+                    <input type="email" class="subscription-input" placeholder="Enter your institutional email"
+                        required>
                     <button type="submit" class="subscription-button">Subscribe</button>
                 </form>
                 <div class="subscription-success" id="subscriptionSuccess">
@@ -2026,7 +2124,7 @@
         <div class="container">
             <h3>Aurora Ridge Partners</h3>
             <h2>The Firm</h2>
-            
+
             <div class="firm-grid">
                 <div class="firm-card fade-in">
                     <h4>About the Firm</h4>
@@ -2077,45 +2175,56 @@
         <div class="container">
             <h3>Research & Thinking</h3>
             <h2>Notes & Perspectives</h2>
-            
+
             <div class="memo-list">
                 <div class="memo-item fade-in" data-memo="1">
                     <div class="memo-header">
                         <div class="memo-main">
                             <h3 class="memo-title">Capital Structure Under Stress</h3>
-                            <p class="memo-excerpt">Examining fracture points in modern financial architecture during liquidity crises and settlement breakdowns.</p>
+                            <p class="memo-excerpt">Examining fracture points in modern financial architecture during
+                                liquidity crises and settlement breakdowns.</p>
                         </div>
                         <div class="memo-meta">
                             <span class="memo-date">Q4 2023</span>
                             <span class="memo-type">Internal Memo</span>
                         </div>
                         <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"/>
+                            <polyline points="6 9 12 15 18 9" />
                         </svg>
                     </div>
                     <div class="memo-detail">
                         <div class="memo-detail-content">
-                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/16ab5e163-7d26-47df-9c2d-16248ce2d027.png" alt="Capital Structure Visualization" class="memo-detail-image">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/16ab5e163-7d26-47df-9c2d-16248ce2d027.png"
+                                alt="Capital Structure Visualization" class="memo-detail-image">
                             <div class="memo-detail-text">
                                 <h4>Executive Summary</h4>
-                                <p>Market collapses never begin with prices — they begin with breakdowns in settlement, trust, and liquidity. This memo examines the structural vulnerabilities that emerge during periods of financial stress, drawing from observations across multiple crisis cycles.</p>
-                                <p>The 2008 financial crisis and 2020 market dislocation revealed that traditional risk models failed to capture the true nature of systemic fragility. Liquidity evaporated not from fundamental asset deterioration, but from the breakdown of intermediary functioning and settlement confidence.</p>
-                                
+                                <p>Market collapses never begin with prices — they begin with breakdowns in settlement,
+                                    trust, and liquidity. This memo examines the structural vulnerabilities that emerge
+                                    during periods of financial stress, drawing from observations across multiple crisis
+                                    cycles.</p>
+                                <p>The 2008 financial crisis and 2020 market dislocation revealed that traditional risk
+                                    models failed to capture the true nature of systemic fragility. Liquidity evaporated
+                                    not from fundamental asset deterioration, but from the breakdown of intermediary
+                                    functioning and settlement confidence.</p>
+
                                 <ul>
                                     <li>Settlement systems become stressed before price dislocations become visible</li>
                                     <li>Counterparty risk assessment fails when correlation assumptions break down</li>
-                                    <li>Liquidity pools that appear robust in normal conditions can vanish simultaneously under stress</li>
+                                    <li>Liquidity pools that appear robust in normal conditions can vanish
+                                        simultaneously under stress</li>
                                     <li>The sequence of failure matters more than the magnitude of initial shock</li>
                                 </ul>
 
                                 <div class="memo-key-points">
                                     <div class="memo-key-point">
                                         <h5>Key Observation</h5>
-                                        <p>Market infrastructure stress precedes visible price movements by 2-4 weeks in most crisis scenarios.</p>
+                                        <p>Market infrastructure stress precedes visible price movements by 2-4 weeks in
+                                            most crisis scenarios.</p>
                                     </div>
                                     <div class="memo-key-point">
                                         <h5>Implication</h5>
-                                        <p>Portfolio construction must account for settlement and liquidity risk, not just market risk.</p>
+                                        <p>Portfolio construction must account for settlement and liquidity risk, not
+                                            just market risk.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2127,39 +2236,49 @@
                     <div class="memo-header">
                         <div class="memo-main">
                             <h3 class="memo-title">Liquidity Is Not Always Where You Expect It</h3>
-                            <p class="memo-excerpt">Hidden liquidity pools and their behavior during market dislocation events — lessons from 2008 and 2020.</p>
+                            <p class="memo-excerpt">Hidden liquidity pools and their behavior during market dislocation
+                                events — lessons from 2008 and 2020.</p>
                         </div>
                         <div class="memo-meta">
                             <span class="memo-date">Q2 2023</span>
                             <span class="memo-type">Internal Memo</span>
                         </div>
                         <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"/>
+                            <polyline points="6 9 12 15 18 9" />
                         </svg>
                     </div>
                     <div class="memo-detail">
                         <div class="memo-detail-content">
-                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1c302d615-3a70-4145-88a3-395f6ba646b2.png" alt="Liquidity Flow Visualization" class="memo-detail-image">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1c302d615-3a70-4145-88a3-395f6ba646b2.png"
+                                alt="Liquidity Flow Visualization" class="memo-detail-image">
                             <div class="memo-detail-text">
                                 <h4>Executive Summary</h4>
-                                <p>Liquidity is not a static property of assets — it is a dynamic function of market structure, participant behavior, and systemic confidence. During dislocation events, liquidity migrates in ways that traditional models fail to predict.</p>
-                                <p>Our analysis of the 2008 and 2020 crises reveals that apparent liquidity can vanish simultaneously across multiple asset classes, while unexpected sources of liquidity emerge in non-traditional venues. Understanding these patterns is critical for portfolio resilience.</p>
-                                
+                                <p>Liquidity is not a static property of assets — it is a dynamic function of market
+                                    structure, participant behavior, and systemic confidence. During dislocation events,
+                                    liquidity migrates in ways that traditional models fail to predict.</p>
+                                <p>Our analysis of the 2008 and 2020 crises reveals that apparent liquidity can vanish
+                                    simultaneously across multiple asset classes, while unexpected sources of liquidity
+                                    emerge in non-traditional venues. Understanding these patterns is critical for
+                                    portfolio resilience.</p>
+
                                 <ul>
                                     <li>ETF liquidity is derivative of underlying market liquidity, not independent</li>
                                     <li>Private markets offer illusory liquidity during normal conditions</li>
-                                    <li>Central bank intervention creates artificial liquidity that distorts price discovery</li>
+                                    <li>Central bank intervention creates artificial liquidity that distorts price
+                                        discovery</li>
                                     <li>Cross-asset correlations converge to 1.0 during true stress events</li>
                                 </ul>
 
                                 <div class="memo-key-points">
                                     <div class="memo-key-point">
                                         <h5>Key Observation</h5>
-                                        <p>Liquidity migration patterns during 2020 differed significantly from 2008, suggesting structural market changes.</p>
+                                        <p>Liquidity migration patterns during 2020 differed significantly from 2008,
+                                            suggesting structural market changes.</p>
                                     </div>
                                     <div class="memo-key-point">
                                         <h5>Implication</h5>
-                                        <p>Portfolio construction must account for liquidity regime changes, not just volatility regimes.</p>
+                                        <p>Portfolio construction must account for liquidity regime changes, not just
+                                            volatility regimes.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2171,39 +2290,51 @@
                     <div class="memo-header">
                         <div class="memo-main">
                             <h3 class="memo-title">Digital Assets as Settlement Layer, Not Trade</h3>
-                            <p class="memo-excerpt">Reframing digital assets within institutional portfolio construction frameworks for non-sovereign liquidity.</p>
+                            <p class="memo-excerpt">Reframing digital assets within institutional portfolio construction
+                                frameworks for non-sovereign liquidity.</p>
                         </div>
                         <div class="memo-meta">
                             <span class="memo-date">Q4 2022</span>
                             <span class="memo-type">Internal Memo</span>
                         </div>
                         <svg class="memo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"/>
+                            <polyline points="6 9 12 15 18 9" />
                         </svg>
                     </div>
                     <div class="memo-detail">
                         <div class="memo-detail-content">
-                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1cf307c5d-7c6e-441a-91d2-a30fa6ae7097.png" alt="Digital Asset Infrastructure Visualization" class="memo-detail-image">
+                            <img src="https://image.qwenlm.ai/public_source/1491de75-4c10-49d6-90c2-4a20e6abe6ae/1cf307c5d-7c6e-441a-91d2-a30fa6ae7097.png"
+                                alt="Digital Asset Infrastructure Visualization" class="memo-detail-image">
                             <div class="memo-detail-text">
                                 <h4>Executive Summary</h4>
-                                <p>Digital assets should not be evaluated as speculative instruments, but as potential infrastructure for non-sovereign settlement and liquidity. This reframing fundamentally changes how institutions should approach allocation and risk assessment.</p>
-                                <p>Since 2014, we have analyzed digital assets through the lens of settlement efficiency, counterparty risk reduction, and operational resilience — not price appreciation. This perspective reveals different risk-return characteristics than traditional analysis.</p>
-                                
+                                <p>Digital assets should not be evaluated as speculative instruments, but as potential
+                                    infrastructure for non-sovereign settlement and liquidity. This reframing
+                                    fundamentally changes how institutions should approach allocation and risk
+                                    assessment.</p>
+                                <p>Since 2014, we have analyzed digital assets through the lens of settlement
+                                    efficiency, counterparty risk reduction, and operational resilience — not price
+                                    appreciation. This perspective reveals different risk-return characteristics than
+                                    traditional analysis.</p>
+
                                 <ul>
                                     <li>Decentralized settlement reduces counterparty concentration risk</li>
-                                    <li>Smart contracts can reduce institutional friction costs in specific use cases</li>
-                                    <li>Digital assets function differently as infrastructure vs. as speculative instruments</li>
+                                    <li>Smart contracts can reduce institutional friction costs in specific use cases
+                                    </li>
+                                    <li>Digital assets function differently as infrastructure vs. as speculative
+                                        instruments</li>
                                     <li>Regulatory clarity is improving but remains the primary adoption constraint</li>
                                 </ul>
 
                                 <div class="memo-key-points">
                                     <div class="memo-key-point">
                                         <h5>Key Observation</h5>
-                                        <p>Institutional adoption follows infrastructure maturation, not price cycles.</p>
+                                        <p>Institutional adoption follows infrastructure maturation, not price cycles.
+                                        </p>
                                     </div>
                                     <div class="memo-key-point">
                                         <h5>Implication</h5>
-                                        <p>Allocation should be based on structural utility, not momentum or thematic exposure.</p>
+                                        <p>Allocation should be based on structural utility, not momentum or thematic
+                                            exposure.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2219,9 +2350,10 @@
         <div class="container">
             <div class="footer-content">
                 <h3>Professional Engagement</h3>
-                <p class="footer-text">Darian engages selectively with institutions, family offices, and long-term partners. Deep strategic dialogue over transactional relationships.</p>
+                <p class="footer-text">Darian engages selectively with institutions, family offices, and long-term
+                    partners. Deep strategic dialogue over transactional relationships.</p>
                 <a href="mailto:contact@auroraridge.partners" class="email-link">contact@auroraridge.partners</a>
-                
+
                 <div class="firm-note">
                     Aurora Ridge Partners — Established 2018, Singapore
                 </div>
@@ -2267,7 +2399,7 @@
 
         // Principle items clickable functionality
         const principleItems = document.querySelectorAll('.principle-item');
-        
+
         principleItems.forEach(item => {
             item.addEventListener('click', () => {
                 principleItems.forEach(otherItem => {
@@ -2281,7 +2413,7 @@
 
         // Memo items clickable functionality
         const memoItems = document.querySelectorAll('.memo-item');
-        
+
         memoItems.forEach(item => {
             item.addEventListener('click', () => {
                 memoItems.forEach(otherItem => {
@@ -2325,7 +2457,7 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -2338,8 +2470,8 @@
         });
     </script>
 </body>
+
 </html>
 
 <!-- ⭐ SECOND PHOTO GOES HERE ⭐ -->
 <img src="..." alt="Darian Vale Koh - Philosophy" class="philosophy-photo">
-
